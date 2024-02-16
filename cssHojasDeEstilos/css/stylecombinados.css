@@ -1,0 +1,11 @@
+p strong{
+    color: red;
+}
+
+h1 strong{
+    color: blue;
+}
+
+p em{
+    color: chartreuse;
+}

@@ -1,0 +1,18 @@
+h1{
+    letter-spacing: 10px; /*Espaciado entre letras*/
+    word-spacing: 30px; /*Espaciado entre palabras*/
+    text-transform: uppercase;
+    /* text-transform puede tomar los valores de:
+        - capitalize: Mayuscula al primer caracter
+        -lowercase: convierte en minúsculas el texto
+        -uppercase: convierte en mayúsculas el texto
+        -none: no provoca cambios    
+    */
+
+}
+
+p{
+    text-indent: 20px; /*indenta la primera linea del texto*/
+    text-align: justify;
+    color: blue;
+}
