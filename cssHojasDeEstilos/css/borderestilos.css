@@ -1,0 +1,53 @@
+.pregunta{
+    background-color: yellow;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 40px;
+
+    margin: 0px;
+}
+
+.respuesta{
+    border-width: 3px;
+    border-style: dashed;
+    border-color: blue;
+    margin: 0px;
+
+}
+
+.titulo{
+    background-color: #ffffcc;
+    text-align: center;
+    font-family: verdana;
+    font-size: 40px;
+
+    border-top-width: 1px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 1px;
+
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    border-right-style: solid;
+
+    
+    border-top-color: red;
+    border-bottom-color: black;
+    border-left-color: black;
+    border-right-color:red;
+
+    padding: 10px 15px 20px 25px; /*arriba derecha abajo izquierda*/
+
+
+
+
+
+
+
+
+
+
+
+}
