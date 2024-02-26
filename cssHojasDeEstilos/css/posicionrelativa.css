@@ -1,0 +1,28 @@
+#caja1, #caja2, #caja3{
+    background-color: #f99;
+    font-family: verdana;
+    font-size: 1.3rem;
+    
+}
+
+/*
+#caja2 {
+    position: relative;
+    left: 15px;
+    top: 5px;
+}*/
+
+
+#caja2 {
+    background-color: yellow;
+    position:absolute;
+    left: 40px;
+    top: 30px;
+}
+
+
+#caja3 {
+    position: relative;
+    left: 150px;
+    top: 5px;
+}
