@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#contenedor{
+    width: 100%;
+    border: 1px solid #000;
+    line-height: 130%;
+    background-color: #f2f2f2;
+}
+
+
+#cabecera{
+    padding: 10px;
+    color: #fff;
+    background-color: #becdef;
+    clear:left;
+}
+
+#columna1{
+    float: left;
+    width: 200px;
+    margin: 0;
+    padding: 1rem;
+    border-right:1px solid #aaa;
+}
+
+#columna2{
+    margin-left: 210px;
+    /* border-left: 1px solid #aaa; */
+    padding: 2rem;
+}
+
+#pie{
+    padding: 10px;
+    color: #fff;
+    background-color: #becdef;
+    clear: left;
+}
