@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        
+        function leerSueldos(sueldos) {
+            let salario;
+            for (let index = 0; index <sueldos.length; index++) {
+                salario = prompt("Ingrese sueldo: ");
+                sueldos[index]=parseInt(salario);
+            }            
+        }
+
+        function sumaSalarios(sueldos) {
+            let suma=0;
+            for (let index = 0; index < sueldos.length; index++) {
+                suma=suma+sueldos[index];                
+            }
+            return suma;
+        }
+        let sueldos=new Array(5);
+        leerSueldos(sueldos);
+        let total= sumaSalarios(sueldos);
+        document.write("<p>La suma de los salarios es: "+total+"</P")
+
+
+    </script>
+</body>
+
+</html>

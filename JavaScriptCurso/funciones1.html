@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        function calcularTabla(valor, inicio, fin) {            
+            let tabla;
+            for (let index = inicio; index <= fin; index++) {
+                tabla=index*valor;
+                document.write(index + " * "+valor+" = "+tabla+"<br>");               
+            }
+        }
+        
+        let valor =parseInt(prompt("Ingreso numero Tabla"));
+        let inicio=parseInt(prompt("Ingreso Incio"));
+        let fin=parseInt(prompt("Ingreso fin"));
+        calcularTabla(valor,inicio,fin)
+
+    </script>
+</body>
+
+</html>

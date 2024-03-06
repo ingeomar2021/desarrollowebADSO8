@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        function formatearFecha(dia, mes, anio) {
+            let cad = "Hoy es " + dia + " de ";
+            switch (mes) {
+                case 1:
+                    cad = cad + "enero"
+                    break;
+                case 2:
+                    cad = cad + "febrero"
+                    break;
+
+                case 3:
+                    cad = cad + "Marzo"
+                    break;
+                case 4:
+                    cad = cad + "Abril"
+                    break;
+                case 5:
+                    cad = cad + "Mayo"
+                    break;
+                case 6:
+                    cad = cad + "Junio"
+                    break;
+
+                case 7:
+                    cad = cad + "Julio"
+                    break;
+                case 8:
+                    cad = cad + "Agosto"
+                    break;
+
+                case 9:
+                    cad = cad + "Septiembre"
+                    break;
+                case 10:
+                    cad = cad + "Octubre"
+                    break;
+
+                case 11:
+                    cad = cad + "Noviembre"
+                    break;
+                case 12:
+                    cad = cad + "Diciembre"
+                    break;
+            } //fin del switch
+            cad=cad+" de "+anio
+            return cad
+        }
+
+        document.write(formatearFecha(15,12,2024))
+
+    </script>
+</body>
+
+</html>
