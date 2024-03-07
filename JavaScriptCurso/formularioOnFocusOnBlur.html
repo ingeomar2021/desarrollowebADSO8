@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body onLoad="activarCampo()">
+
+    <form action="#">
+        <p>Ingrese su nombre: <input type="text" id="nombre" onFocus="vaciar(this)" ></p>
+        <p>Ingrese su edad: <input type="text" id="edad" onFocus="vaciar(this)"></p>
+        <p><input type="button" value="Confirmar"></p>
+    </form>
+
+    <script>
+        function vaciar(control) {
+            control.value="";            
+        }
+
+        function dejarFoco(control) {
+            alert("El texto en el campo es :"+control.value);
+            
+        }
+
+        function activarCampo(params) {
+            document.getElementById("nombre").focus();
+            
+        }
+        
+
+    </script>
+</body>
+
+</html>
