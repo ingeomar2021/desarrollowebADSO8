@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        let sueldos=[];
+        let sueldos2=[];
+        let monto;
+        do {
+            monto=parseInt(prompt("Ingrese sueldo. (0 para finalizar)"));
+            if (monto!=0) {
+                sueldos.push(monto);
+                sueldos2.unshift(monto)                
+            }            
+        } while (monto!=0);
+        let suma=0;
+
+        document.write("<p>Los sueldos ingresados son: </p><br>")
+        for(let i=0;i<sueldos.length;i++){
+            document.write(sueldos[i]+"<br>");
+        }
+
+        document.write("<br>");
+
+        for(let i=0;i<sueldos.length;i++){
+            document.write(sueldos2[i]+"<br>");
+        }
+
+        let cadenaSueldos=sueldos.toString();
+        document.write(cadenaSueldos+"<br>");
+
+        document.write(sueldos2.toString()+"<br>");
+
+        delete sueldos2[2];
+        document.write(sueldos2.toString()+"<br>");
+
+
+
+        document.write("<p>Estadisticas: </p><br>")
+
+        for(let i=0;i<sueldos.length;i++){
+            suma=suma+sueldos[i];
+        }
+
+
+        document.write("El total de los sueldos es: "+suma);
+
+    </script>
+</body>
+
+</html>

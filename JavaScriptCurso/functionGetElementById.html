@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body id="cuerpo">
+    <h1 id="titulo"></h1>
+    <p id="parrafo"></p>
+    <script>
+
+
+        function incicio() {
+            
+            function elementoSeleccionado(ele) {
+                return document.getElementById(ele);
+            }
+            elementoSeleccionado("cuerpo").style.backgroundColor = "#ffff00";
+            elementoSeleccionado("titulo").innerHTML = "Titulo h1 desde JS";
+            elementoSeleccionado("parrafo").innerHTML = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione doloremque, nobis quos, rem fugiat amet harum adipisci molestiae eos hic perferendis? Libero explicabo velit tempora aspernatur illo placeat accusantium reiciendis.";
+
+
+        }
+        incicio();
+
+
+
+    </script>
+
+</body>
+
+</html>
