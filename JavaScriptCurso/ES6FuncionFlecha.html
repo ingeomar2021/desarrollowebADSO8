@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        //Funcion anonima Tradicional
+        let aumentar=function(a){
+            return a+100;
+        }
+
+        document.write("Con función Anonima Tradicional:"+aumentar(30));
+        document.write("<br>");
+
+        //Usando función flecha
+
+        let aumentarFlecha=(a)=>{
+            return a+100;
+        }
+
+        document.write("Con función flecha :"+aumentarFlecha(30));
+        document.write("<br>");
+
+        //Simplificando un poco mas: Quitamos corchetes y return (si el cuerpo de la funci+on sólo es de una linea)
+        let aumentarFlecha2= (a) => a+100;
+        
+
+        document.write("Con función flecha mas simplificada:"+aumentarFlecha2(30));
+        document.write("<br>");
+
+        //Simplificando un poco mas: Quitamos parentesis de parametros (si los parametros son uno sólo)
+        let aumentarFlecha3= a => a+100;      
+
+        document.write("Con función flecha mas simplificada sin parentesis parametros:"+aumentarFlecha3(30));
+        document.write("<br>");
+
+
+
+        let aumentarFlecha4= (a,b) => a+b+100;    
+        document.write("Con función flecha mas de un parametros:"+aumentarFlecha4(30,40));
+        document.write("<br>");
+
+
+
+        let aumentarFlecha5= (a,b)  => {
+            let suma=a+b+100;
+            let rest=suma-20;
+            return rest;
+        }      
+
+        document.write("Con función flecha mas de un parametro y varias lineas en el cuerpo:"+aumentarFlecha5(30,40));
+        document.write("<br>");
+
+        let aumentarFlecha6= ()  => {
+            let suma=100
+            let rest=suma-20;
+            return rest;
+        }      
+
+        document.write("Con función flecha mas de un parametro y varias lineas en el cuerpo:"+aumentarFlecha6());
+        document.write("<br>");
+
+
+
+
+    </script>
+</body>
+
+</html>
