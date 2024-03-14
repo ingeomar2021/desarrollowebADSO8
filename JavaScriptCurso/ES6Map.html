@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        const diccionario1=new Map();
+        diccionario1.set("casa","house");
+        diccionario1.set("rojo","red");
+        diccionario1.set("hijo","son");
+        diccionario1.set("abuelo","grandfather");
+        diccionario1.set("cansado","tired");
+        diccionario1.set("ocupado","busy");
+        document.write(diccionario1);
+        console.log(diccionario1)
+
+        const mapa1=new Map([
+            ["casa","house"],
+            ["rojo","red"],
+            ["hijo","son"],
+            ["abuelo","grandfather"],
+            ["cansado","tired"],
+            ["ocupado","busy"]
+        ]);
+        console.log(mapa1)
+        console.log(mapa1.get("hijo"));
+        mapa1.set("ventana","window");
+        console.log(mapa1)
+        console.log(mapa1.size);
+        mapa1.delete("abuelo");
+        console.log(mapa1)
+
+        for (const [clave,valor] of mapa1) {
+            document.write("A la clave "+clave+" le corresponde el valor: "+valor+"<br>");
+
+            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <script>
+        const cadena="Hola Mundo";
+        for (const letra of cadena) {
+            document.write(letra+"<br>");            
+        }
+
+        const numeros=[10,40,50,60];
+        let suma=0;
+        for (const numero of numeros) {
+            suma+=numero;            
+        }
+        document.write("La suma es: "+suma+"<br>");
+
+        //Usando objetos literas
+        const personas=[{
+            nombre:"juan",
+            edad:45
+        },{
+            nombre:"ana",
+            edad:12
+        },{
+            nombre:"Cristina",
+            edad:26
+        }]
+
+        for (const persona of personas) {
+            document.write(persona.nombre+" tiene " +persona.edad+"<br>");   
+                       
+        }
+
+
+        const numeros2=[10,40,50,60];
+        for (let [indice, valor] of numeros2.entries()) {
+            document.write("Metodo entries: "+ numeros2.entries().toString())
+            document.write(`El ${valor} ocupa la posición ${indice} <br>`);  
+        }
+        
+
+
+
+    </script>
+</body>
+
+</html>
