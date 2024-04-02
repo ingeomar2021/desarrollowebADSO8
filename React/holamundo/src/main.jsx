@@ -7,11 +7,14 @@ import ComponenteSuma from './ComponenteSuma.jsx'
 import ComponenteHook from './ComponenteHook.jsx'
 import ComponenteHook2 from './ComponenteHook2.jsx'
 import ComponenteHook3 from './ComponenteHook3.jsx'
+import AppDado from './ComponenteDadoApp.jsx'
+import DadoAppBoton from './ComponenteDadoBoton.jsx'
+import OperacionesApp from './ComponenteOperaciones.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <ComponenteHook3 />
+   <OperacionesApp />
    
     
   </React.StrictMode>,
