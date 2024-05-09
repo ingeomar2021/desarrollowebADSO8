@@ -29,6 +29,12 @@ def calcula_edad(request,anio):
     documento=f"<html><body><h2>En el año {anio} tendras {edad_futura} </h2></body></html>"
     return HttpResponse(documento)
 
+#Calcular edad futura d euna persona a partir d ela edad enviada y a partir del año 2024
+def calcula_edad_futura(request,edad_actual,anio):
+    periodo=anio-2024
+    edad_futura=edad_actual+periodo
+    documento=f"<html><body><h2>En el año {anio} tendras {edad_futura} </h2></body></html>"
+    return HttpResponse(documento)
 
 
 
