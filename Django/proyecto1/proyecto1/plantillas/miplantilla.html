@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera Plantilla</title>
+</head>
+<body>
+    <h1>Documento con primera plantilla</h1>
+
+    <p>El nombre del profesor es: {{nombre_profesor|title}} y su edad es {{edad}}y la fecha actual es: {{fecha.day}}/{{fecha.month}}/{{fecha.year}}</p>
+
+    <p>Las materias que dicta el profesor son: {{materias}}</p>
+    <p>Su asignatura principal es: {{materias.0}}</p>
+
+    {# Comentario de linea #}
+
+    {% comment %} 
+            Estos es un Comentario 
+            de varias lineas
+    {% endcomment %}
+
+
+    <p>
+        <ul>
+            {% if materias %}
+                {% for materia in materias %}
+                    <li>{{materia}}</li>
+                {% endfor %}
+            {% else %}
+                <p>El docente no tiene asignadas materias</p>
+            {% endif %}
+        </ul>
+    </p>
+
+    {% if nombre_profesor == "Omar" %}
+        <p>El curso lo imparte el profesor titular</p>
+    {% else %}
+        <p>El curso lo imparte el profesor suplente</p>
+    {% endif %}
+
+
+
+</body>
+</html>

@@ -1,6 +1,94 @@
 from django.http import HttpResponse
 import datetime
 
+from django.template import Template, Context
+
+from django.template import loader
+
+
+class Persona:
+    def __init__(self,nombre,apellido,edad):
+        self.nombre=nombre
+        self.apellido=apellido
+        self.edad=edad
+
+def saludo_plantilla_loader(request):
+
+    p1=Persona("Juan Fernando","Galan",28)
+    fecha_actual=datetime.datetime.now()
+
+    materias=["Algoritmos","Base de Datos","Java","Python"]
+
+    #materias=[]
+
+    doc_externo=loader.get_template('miplantilla.html')
+
+    contexto={
+        "nombre_profesor": p1.nombre,
+        "edad":p1.edad,
+        "fecha":fecha_actual,   
+        "materias":materias     
+        }
+    
+    documento=doc_externo.render(contexto)
+
+    return HttpResponse(documento)
+
+
+def saludo_plantilla_clase(request):
+
+    p1=Persona("Juan Fernando","Galan",28)
+    fecha_actual=datetime.datetime.now()
+
+    materias=["Algoritmos","Base de Datos","Java","Python"]
+
+    #materias=[]
+
+    doc_externo=open("C:/Users/SENA/Documents/ADSO8DesarrolloWeb/CodigoEnClase/RepositorioDesarrolloWebADSO8/Django/proyecto1/proyecto1/plantillas/miplantilla.html")
+
+    plantilla= Template(doc_externo.read())
+    
+    doc_externo.close()
+
+    contexto=Context({
+        "nombre_profesor": p1.nombre,
+        "edad":p1.edad,
+        "fecha":fecha_actual,   
+        "materias":materias     
+        })
+
+    documento=plantilla.render(contexto)
+
+    return HttpResponse(documento)
+
+def saludo_plantilla(request):
+
+    nombre="Omar Gutierrez Acosta"
+    edad=48
+    fecha_actual=datetime.datetime.now()
+
+    doc_externo=open("C:/Users/SENA/Documents/ADSO8DesarrolloWeb/CodigoEnClase/RepositorioDesarrolloWebADSO8/Django/proyecto1/proyecto1/plantillas/miplantilla.html")
+
+    plantilla= Template(doc_externo.read())
+    
+    doc_externo.close()
+
+    contexto=Context({
+        "nombre_profesor":nombre,
+        "edad":edad,
+        "fecha":fecha_actual        
+        })
+
+    documento=plantilla.render(contexto)
+
+    return HttpResponse(documento)
+
+
+
+
+
+
+
 def saludo(request):
     documento="<html><body><h1> Primera página de Django </h1></body></html>"
     return HttpResponse(documento)
