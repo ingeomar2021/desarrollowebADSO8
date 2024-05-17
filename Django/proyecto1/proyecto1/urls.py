@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from proyecto1.views import saludo, despedida, dame_fecha, saludopersonal, calcula_edad, calcula_edad_futura, saludo_plantilla, saludo_plantilla_clase, saludo_plantilla_loader
+from proyecto1.views import saludo, despedida, dame_fecha, saludopersonal, calcula_edad, calcula_edad_futura, saludo_plantilla, saludo_plantilla_clase, saludo_plantilla_loader, saludo_plantilla_render,scrum
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +30,7 @@ urlpatterns = [
     path('saludoplantilla/', saludo_plantilla),
     path('saludoplantillaclase/', saludo_plantilla_clase),
     path('saludoplantillaloader/', saludo_plantilla_loader),
+    path('saludoplantillarender/', saludo_plantilla_render),
+    path('scrum/', scrum),
+    
 ]

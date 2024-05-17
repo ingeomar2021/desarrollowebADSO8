@@ -5,12 +5,41 @@ from django.template import Template, Context
 
 from django.template import loader
 
+from django.shortcuts import render
+
 
 class Persona:
     def __init__(self,nombre,apellido,edad):
         self.nombre=nombre
         self.apellido=apellido
         self.edad=edad
+
+def scrum(request):
+    fecha_actual=datetime.datetime.now()
+    
+    contexto={
+        "obtener_fecha":fecha_actual
+    }
+
+    return render(request,"scrum.html",contexto)
+
+
+def saludo_plantilla_render(request):
+
+    p1=Persona("Juan Fernando","Galan",28)
+    fecha_actual=datetime.datetime.now()
+    materias=["Algoritmos","Base de Datos","Java","Python"]
+  
+    contexto={
+        "nombre_profesor": p1.nombre,
+        "edad":p1.edad,
+        "fecha":fecha_actual,   
+        "materias":materias     
+    }  
+
+    return render(request,'miplantilla.html',contexto)
+
+
 
 def saludo_plantilla_loader(request):
 
@@ -33,6 +62,7 @@ def saludo_plantilla_loader(request):
     documento=doc_externo.render(contexto)
 
     return HttpResponse(documento)
+
 
 
 def saludo_plantilla_clase(request):

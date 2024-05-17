@@ -6,6 +6,8 @@
     <title>Mi primera Plantilla</title>
 </head>
 <body>
+    {% include "superior/barra.html" %}
+
     <h1>Documento con primera plantilla</h1>
 
     <p>El nombre del profesor es: {{nombre_profesor|title}} y su edad es {{edad}}y la fecha actual es: {{fecha.day}}/{{fecha.month}}/{{fecha.year}}</p>
